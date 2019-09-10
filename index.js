@@ -8,11 +8,6 @@ const port = process.env.port || 3000
 app.get('/places/:id', async (req, res) => {
     try {
         const place = await Places.findById({ _id: req.params.id })
-        // if(place) {
-        //     console.log('found')
-        // } else {
-        //     console.log('not found')
-        // }
         res.send({place})
     } catch (e) {
         res.status(404).send(e)
