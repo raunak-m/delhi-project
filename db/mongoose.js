@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost:27017/delhi-places', {
+mongoose.connect('mongodb://dbuser:dbpass@host1:port1,host2:port2/delhi-place', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
