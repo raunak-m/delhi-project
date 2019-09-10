@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb%2Bsrv%3A%2F%2Fraunak%3A8802945451%40delhi-places-5q1f6.mongodb.net%2Ftest%3FretryWrites%3Dtrue%26w%3Dmajority', {
+mongoose.connect('mongodb+srv://raunak:8802945451@delhi-places-5q1f6.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
