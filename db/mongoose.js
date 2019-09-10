@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://dbuser:dbpass@host1:port1,host2:port2/delhi-place', {
+mongoose.connect('mongodb+srv://raunak:8802945451@delhi-places-5q1f6.mongodb.net/test', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
