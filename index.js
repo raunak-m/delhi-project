@@ -14,6 +14,12 @@ app.get('/places/:id', async (req, res) => {
     }
 })
 
+process.stdout.on('error', function( err ) {
+    if (err.code == "EPIPE") {
+        process.exit(0);
+    }
+});
+
 app.listen(port, () => {
     console.log('Server is up on port ' + port)
 })
