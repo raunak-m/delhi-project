@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb+srv://raunak%3A8802945451@delhi-places-5q1f6.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://127.0.0.1:27017/delhi-places', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
