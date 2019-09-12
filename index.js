@@ -14,6 +14,10 @@ app.get('/places/:id', async (req, res) => {
     }
 })
 
+app.post('/', (req, res) => {
+    res.send(<h1>hello world</h1>)
+})
+
 process.stdout.on('error', function( err ) {
     if (err.code == "EPIPE") {
         process.exit(0);
