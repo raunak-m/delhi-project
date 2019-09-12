@@ -14,6 +14,3 @@ mongoose.connect('mongodb+srv://raunak:8802945451@delhi-places-5q1f6.mongodb.net
     process.exit();
 });
 
-module.exports = {
-    mongoose
-}
