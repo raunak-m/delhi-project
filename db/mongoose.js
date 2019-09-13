@@ -13,4 +13,3 @@ mongoose.connect('mongodb+srv://raunak:8802945451@delhi-places-5q1f6.mongodb.net
     console.log('Could not connect to the database. Exiting now...', err);
     process.exit();
 });
-
