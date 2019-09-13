@@ -27,16 +27,17 @@ app.get('/places', async (req, res) => {
 app.get('/places/:id', async (req, res) => {
     try {
         const place = await Places.findById({ _id: req.params.id })
-        if(place) {
-            console.log('found')
-        } else {
-            console.log('not found')
-        }
+        // if(place) {
+        //     console.log('found')
+        // } else {
+        //     console.log('not found')
+        // }
         res.send({place})
     } catch (e) {
         res.status(404).send(e)
     }
 })
+
 
 process.stdout.on('error', function( err ) {
     if (err.code == "EPIPE") {

@@ -21,6 +21,10 @@ const placesSchema = new mongoose.Schema({
     nerestMetro: {
         type: String,
         required: false,
+    },
+    mapLink: {
+        type: String,
+        required: false
     }
 })
 
