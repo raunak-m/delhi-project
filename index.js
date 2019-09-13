@@ -5,6 +5,8 @@ require('./db/mongoose')
 const app = express()
 const port = process.env.PORT || 3000
 
+app.use(express.json())
+
 app.get('/places/:id', async (req, res) => {
     try {
         const place = await Places.findById({ _id: req.params.id })
