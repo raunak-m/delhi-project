@@ -38,6 +38,29 @@ app.get('/places/:id', async (req, res) => {
     }
 })
 
+// app.patch('/places/:id', async (req, res) => {
+//     try {
+//         let place = await Places.findById({ _id: req.params.id })
+//         place = {
+//             ...req.body
+//         }
+        
+//         await place.save()
+//         res.send(place)    
+//     } catch (e) {
+//         res.status(400).send(e)
+//     }
+// })
+
+app.delete('/places/delete/:id', async (req, res) => {
+    try {
+        const place = await Places.findOneAndDelete({ _id: req.params.id})
+        
+        res.send(place)
+    } catch (e) {
+        res.status(500).send(e)
+    }
+})
 
 process.stdout.on('error', function( err ) {
     if (err.code == "EPIPE") {

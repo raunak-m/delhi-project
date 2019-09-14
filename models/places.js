@@ -16,13 +16,38 @@ const placesSchema = new mongoose.Schema({
         required: true
     },
     photos: {
-        type: Array
+        type: Array,
+        required: true
     },
-    nerestMetro: {
+    nearestMetro: {
         type: String,
         required: false,
     },
     mapLink: {
+        type: String,
+        required: false
+    },
+    location: {
+        type: Array,
+        required: false
+    },
+    category: {
+        type: String,
+        required: true
+    },
+    ticketPrice: {
+        type: Array,
+        required: false
+    },
+    openAllWeek: {
+        type: Boolean,
+        required: false
+    },
+    timings: {
+        type: Array,
+        required: false
+    },
+    attractions: {
         type: String,
         required: false
     }
